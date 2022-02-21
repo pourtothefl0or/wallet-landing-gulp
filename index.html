@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- === HEADER === -->
+  <header class="header">
+    <div class="header__container container">
+      <a href="#" class="logo">
+        <img class="logo__image" src="./img/logo.svg" alt="Wallet logo">
+      </a>
+      <nav class="header__nav">
+        <button class="btn-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="header-menu">
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">Home</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">Blog</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">FAQ</a>
+          </li>
+          <li class="header-menu__item">
+            <a href="#" class="header-menu__link">Security</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__btns">
+        <button class="btn btn--tertiary">Log In</button>
+        <button class="btn btn--secondary">Sign Up</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- === HERO === -->
+    <section class="hero">
+      <picture>
+        <source srcset="./img/hero/hero-bg-2.webp, ./img/hero/2x/hero-bg-2@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+        <source srcset="./img/hero/hero-bg-2.png, ./img/hero/2x/hero-bg-2@2x.png 2x" type="image/png" media="(max-width: 767px)">
+        <source srcset="./img/hero/hero-bg-1.webp, ./img/hero/2x/hero-bg-1@2x.webp 2x" type="image/webp">
+        <img class="hero__image" src="./img/hero/hero-bg-1.png" srcset="./img/hero/2x/hero-bg-1@2x.png 2x" alt="Hero cover">
+      </picture>
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h1 class="hero__title title title--xxl">All operations <br> in a Single Wallet</h1>
+          <p class="hero__descr descr">
+            The PayPay Wallet is a safe place for the trader’s portfolio: <br> store your crypto & fiat funds to track profits and other activities.
+          </p>
+          <div class="hero__apps apps">
+            <div class="apps-item">
+              <a href="#" class="apps__link">
+                <img class="apps__link-image" src="./img/icons/google-play.svg" alt="Google Play">
+              </a>
+              <div class="apps-item__rate">
+                <p class="apps-item__rate-value">4.6</p>
+                <p class="apps-item__rate-reviews">78 reviews</p>
+              </div>
+            </div>
+            <div class="apps-item">
+              <a href="#" class="apps__link">
+                <img class="apps__link-image" src="./img/icons/app-store.svg" alt="App Store">
+              </a>
+              <div class="apps-item__rate">
+                <p class="apps-item__rate-value">4.6</p>
+                <p class="apps-item__rate-reviews">80 reviews</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- === COINS === -->
+    <section class="coins">
+      <div class="coins__container container">
+        <h2 class="coins__title title">Cryptocurrencies that we operate</h2>
+        <p class="coins__descr descr">
+          Our team is increasing the number of cryptocurrency pairs on-a-regular-basis. Discover cryptocurrencies that we currently support, as well as which new cryptocurrencies will appear in our exchange module and trading terminal in the near future.
+        </p>
+        <ul class="coins-list">
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/btc.svg" alt="Bitcoin">
+              <h3 class="coins-card__abbr">BTC</h3>
+              <p class="coins-card__name">Bitcoin</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/ftm.svg" alt="Fantom">
+              <h3 class="coins-card__abbr">FTM</h3>
+              <p class="coins-card__name">Fantom</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/rep.svg" alt="Augul">
+              <h3 class="coins-card__abbr">REP</h3>
+              <p class="coins-card__name">Augul</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/gin.svg" alt="GINcoin">
+              <h3 class="coins-card__abbr">GIN</h3>
+              <p class="coins-card__name">GINcoin</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/eth.svg" alt="Ethereum">
+              <h3 class="coins-card__abbr">ETH</h3>
+              <p class="coins-card__name">Ethereum</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/comp.svg" alt="Compound">
+              <h3 class="coins-card__abbr">COMP</h3>
+              <p class="coins-card__name">Compound</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/ltc.svg" alt="Litecoin">
+              <h3 class="coins-card__abbr">LTC</h3>
+              <p class="coins-card__name">Litecoin</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/ngc.svg" alt="NAGA">
+              <h3 class="coins-card__abbr">NGC</h3>
+              <p class="coins-card__name">NAGA</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/usdt.svg" alt="Tether">
+              <h3 class="coins-card__abbr">USDT</h3>
+              <p class="coins-card__name">Tether</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/snt.svg" alt="STATUS">
+              <h3 class="coins-card__abbr">SNT</h3>
+              <p class="coins-card__name">STATUS</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/trx.svg" alt="TRON">
+              <h3 class="coins-card__abbr">TRX</h3>
+              <p class="coins-card__name">TRON</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/emc.svg" alt="Emercoin">
+              <h3 class="coins-card__abbr">EMC</h3>
+              <p class="coins-card__name">Emercoin</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/xlm.svg" alt="Stellar">
+              <h3 class="coins-card__abbr">XLM</h3>
+              <p class="coins-card__name">Stellar</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/bnt.svg" alt="Bancor">
+              <h3 class="coins-card__abbr">BNT</h3>
+              <p class="coins-card__name">Bancor</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/mana.svg" alt="Decentraland">
+              <h3 class="coins-card__abbr">MANA</h3>
+              <p class="coins-card__name">Decentraland</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/ink.svg" alt="Ink">
+              <h3 class="coins-card__abbr">INK</h3>
+              <p class="coins-card__name">Ink</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/bch.svg" alt="Bitcoin Cash">
+              <h3 class="coins-card__abbr">BCH</h3>
+              <p class="coins-card__name">Bitcoin Cash</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/sol.svg" alt="Solana">
+              <h3 class="coins-card__abbr">SOL</h3>
+              <p class="coins-card__name">Solana</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-list__link coins-card">
+              <img class="coins-card__image" src="./img/coins/act.svg" alt="Achain">
+              <h3 class="coins-card__abbr">ACT</h3>
+              <p class="coins-card__name">Achain</p>
+            </a>
+          </li>
+          <li class="coins-list__item">
+            <a href="#" class="coins-other descr">And many others</a>
+          </li>
+        </ul>
+        <div class="centered">
+          <button class="btn btn--arrow">
+            See all
+            <svg>
+              <use xlink:href="./img/sprite.svg#btn-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- === BLOG === -->
+    <section class="blog">
+      <div class="blog__container container">
+        <h2 class="blog__title title">Blog</h2>
+        <ul class="blog-list">
+          <li class="blog-list__item">
+            <a href="#" class="blog-card__link blog-card">
+              <div class="blog-card__image">
+                <picture>
+                  <source srcset="./img/blog/blog-card-image-1.webp, ./img/blog/2x/blog-card-image-1@2x.webp 2x" type="image/webp">
+                  <img src="./img/blog/blog-card-image-1.jpeg" srcset="./img/blog/2x/blog-card-image-1@2x.jpeg 2x" alt="Blog card cover">
+                </picture>
+              </div>
+              <div class="blog-card__info">
+                <time class="blog-card__date" datetime="2021-10-12">12 Oct 2021</time>
+                <div class="blog-card__title-inner">
+                  <h3 class="blog-card__title">How Asset Tokenization Can Help Business Entrepreneurs</h3>
+                </div>
+                <p class="blog-card__descr descr">
+                  Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt.
+                </p>
+              </div>
+              <div class="blog-author">
+                <div class="blog-author__image">
+                  <picture>
+                    <source srcset="./img/blog/blog-author-1.webp, ./img/blog/2x/blog-author-1@2x.webp 2x" type="image/webp">
+                    <img src="./img/blog/blog-author-1.png" srcset="./img/blog/2x/blog-author-1@2x.png 2x" alt="Blog card author">
+                  </picture>
+                </div>
+                <p class="blog-author__name title title--xs">Daniel Frost</p>
+                <p class="blog-author__position descr">Сryptocurrency expert</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-list__item">
+            <a href="#" class="blog-card__link blog-card">
+              <div class="blog-card__image">
+                <picture>
+                  <source srcset="./img/blog/blog-card-image-1.webp, ./img/blog/2x/blog-card-image-1@2x.webp 2x" type="image/webp">
+                  <img src="./img/blog/blog-card-image-1.jpeg" srcset="./img/blog/2x/blog-card-image-1@2x.jpeg 2x" alt="Blog card cover">
+                </picture>
+              </div>
+              <div class="blog-card__info">
+                <time class="blog-card__date" datetime="2021-10-12">12 Oct 2021</time>
+                <div class="blog-card__title-inner">
+                  <h3 class="blog-card__title">Lacerat tristique orci ornare tortor diam. Vitae faucibus sed odio fringilla facilisis facilisis</h3>
+                </div>
+                <p class="blog-card__descr descr">
+                  Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt.
+                </p>
+              </div>
+              <div class="blog-author">
+                <div class="blog-author__image">
+                  <picture>
+                    <source srcset="./img/blog/blog-author-1.webp, ./img/blog/2x/blog-author-1@2x.webp 2x" type="image/webp">
+                    <img src="./img/blog/blog-author-1.png" srcset="./img/blog/2x/blog-author-1@2x.png 2x" alt="Blog card author">
+                  </picture>
+                </div>
+                <p class="blog-author__name title title--xs">Daniel Frost</p>
+                <p class="blog-author__position descr">Сryptocurrency expert</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-list__item">
+            <a href="#" class="blog-card__link blog-card">
+              <div class="blog-card__image">
+                <picture>
+                  <source srcset="./img/blog/blog-card-image-2.webp, ./img/blog/2x/blog-card-image-2@2x.webp 2x" type="image/webp">
+                  <img src="./img/blog/blog-card-image-2.jpeg" srcset="./img/blog/2x/blog-card-image-2@2x.jpeg 2x" alt="Blog card cover">
+                </picture>
+              </div>
+              <div class="blog-card__info">
+                <time class="blog-card__date" datetime="2021-10-12">12 Oct 2021</time>
+                <div class="blog-card__title-inner">
+                  <h3 class="blog-card__title">Lacerat tristique orci ornare tortor diam. Vitae faucibus sed odio fringilla facilisis facilisis</h3>
+                </div>
+                <p class="blog-card__descr descr">
+                  Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt.
+                </p>
+              </div>
+              <div class="blog-author">
+                <div class="blog-author__image">
+                  <picture>
+                    <source srcset="./img/blog/blog-author-2.webp, ./img/blog/2x/blog-author-2@2x.webp 2x" type="image/webp">
+                    <img src="./img/blog/blog-author-2.png" srcset="./img/blog/2x/blog-author-2@2x.png 2x" alt="Blog card author">
+                  </picture>
+                </div>
+                <p class="blog-author__name title title--xs">Mark Thompson</p>
+                <p class="blog-author__position descr">Entrepreneur</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-list__item">
+            <a href="#" class="blog-card__link blog-card">
+              <div class="blog-card__image">
+                <picture>
+                  <source srcset="./img/blog/blog-card-image-3.webp, ./img/blog/2x/blog-card-image-3@2x.webp 2x" type="image/webp">
+                  <img src="./img/blog/blog-card-image-3.jpeg" srcset="./img/blog/2x/blog-card-image-3@2x.jpeg 2x" alt="Blog card cover">
+                </picture>
+              </div>
+              <div class="blog-card__info">
+                <time class="blog-card__date" datetime="2021-10-12">12 Oct 2021</time>
+                <div class="blog-card__title-inner">
+                  <h3 class="blog-card__title">Lacerat tristique orci ornare tortor diam. Vitae faucibus sed odio fringilla facilisis facilisis</h3>
+                </div>
+                <p class="blog-card__descr descr">
+                  Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt.
+                </p>
+              </div>
+              <div class="blog-author">
+                <div class="blog-author__image">
+                  <picture>
+                    <source srcset="./img/blog/blog-author-1.webp, ./img/blog/2x/blog-author-1@2x.webp 2x" type="image/webp">
+                    <img src="./img/blog/blog-author-1.png" srcset="./img/blog/2x/blog-author-1@2x.png 2x" alt="Blog card author">
+                  </picture>
+                </div>
+                <p class="blog-author__name title title--xs">Daniel Frost</p>
+                <p class="blog-author__position descr">Сryptocurrency expert</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="blog__btn btn">See all news</a>
+      </div>
+    </section>
+    <!-- === LOCATION === -->
+    <section class="location">
+      <picture>
+        <source srcset="./img/location/location-bg-1.webp, ./img/location/2x/location-bg-1@2x.webp 2x" type="image/webp">
+        <img class="location__image" src="./img/location/location-bg-1.jpeg" srcset="./img/location/2x/location-bg-1@2x.jpeg 2x" alt="Geoposition">
+      </picture>
+      <div class="location__container container">
+        <h2 class="location__title title">Where we are?</h2>
+        <ul class="location__cities">
+          <li class="location__item">
+            <a href="#" class="location__link location__link--active">
+              <div class="location__link-icon">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#location-map"></use>
+                </svg>
+              </div>
+              <h3 class="location__link-city title title--xs">Tallin</h3>
+              <address class="location__link-address descr">
+                Tallinn, Kesklinna linnaosa, Poordi tn 3-75, 10156, Estonia.
+              </address>
+            </a>
+          </li>
+          <li class="location__item">
+            <a href="#" class="location__link">
+              <div class="location__link-icon">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#location-map"></use>
+                </svg>
+              </div>
+              <h3 class="location__link-city title title--xs">Kiev</h3>
+              <address class="location__link-address descr">
+                Kiev, Kesklinna linnaosa, Poordi tn 3-75, 10156, Ukraine.
+              </address>
+            </a>
+          </li>
+          <li class="location__item">
+            <a href="#" class="location__link">
+              <div class="location__link-icon">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#location-map"></use>
+                </svg>
+              </div>
+              <h3 class="location__link-city title title--xs">Dubai</h3>
+              <address class="location__link-address descr">
+                Dubai, Kesklinna linnaosa, Poordi tn 3-75, 10156, UAE.
+              </address>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- === CONTACTS === -->
+    <section class="contacts">
+      <div class="contacts__container container">
+        <h2 class="contacts__title title">Contacts us</h2>
+        <ul class="contacts-workers">
+          <li class="contacts-workers__item contacts-person">
+            <div class="contacts-person__image">
+              <div class="contacts-person-social">
+                <a href="#" class="contacts-person-social__link">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#circle-telegram"></use>
+                  </svg>
+                </a>
+                <a href="#" class="contacts-person-social__link">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#circle-mail"></use>
+                  </svg>
+                </a>
+              </div>
+              <picture>
+                <source srcset="./img/contacts/contacts-person-1.webp, ./img/contacts/2x/contacts-person-1@2x.webp 2x" type="image/webp">
+                <img src="./img/contacts/contacts-person-1.jpeg" srcset="./img/contacts/2x/contacts-person-1@2x.jpeg 2x" alt="Contacts person">
+              </picture>
+            </div>
+            <div class="contacts-person__info">
+              <p class="contacts-person__info-name">Ralph Edwards</p>
+              <p class="contacts-person__info-position">Community manager</p>
+            </div>
+          </li>
+          <li class="contacts-workers__item contacts-person">
+            <div class="contacts-person__image">
+              <div class="contacts-person-social">
+                <a href="#" class="contacts-person-social__link">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#circle-telegram"></use>
+                  </svg>
+                </a>
+                <a href="#" class="contacts-person-social__link">
+                  <svg>
+                    <use xlink:href="./img/sprite.svg#circle-mail"></use>
+                  </svg>
+                </a>
+              </div>
+              <picture>
+                <source srcset="./img/contacts/contacts-person-2.webp, ./img/contacts/2x/contacts-person-2@2x.webp 2x" type="image/webp">
+                <img src="./img/contacts/contacts-person-2.jpeg" srcset="./img/contacts/2x/contacts-person-2@2x.jpeg 2x" alt="Contacts person">
+              </picture>
+            </div>
+            <div class="contacts-person__info">
+              <p class="contacts-person__info-name">Arlene McCoy</p>
+              <p class="contacts-person__info-position">Community manager</p>
+            </div>
+          </li>
+        </ul>
+        <p class="contacts__descr descr">
+          Use this form to reach out to us
+        </p>
+        <form class="contacts-form" action="#" method="post">
+          <div class="contacts-form__items">
+            <label class="form-field">
+              <span class="form-field__caption">Email</span>
+              <input class="form-field__input" type="email" name="email" placeholder="nick@example.com" required>
+              <span class="form-field__alert">Error text</span>
+            </label>
+            <label class="form-field">
+              <span class="form-field__caption">Phone</span>
+              <input class="form-field__input" type="tel" name="phone" placeholder="+44 (000) 000-0000" required>
+              <span class="form-field__alert">Error text</span>
+            </label>
+            <label class="form-field">
+              <span class="form-field__caption">Country</span>
+              <select class="form-field__input form-field__input--dropdown" name="country" required>
+                <option value="" disabled hidden>Choose a country</option>
+                <option value="uk" selected>United Kingdom</option>
+                <option value="us">United States</option>
+                <option value="russia">Russia</option>
+                <option value="ukraine">Ukraine</option>
+              </select>
+              <span class="form-field__alert">Error text</span>
+            </label>
+            <fieldset class="form-field form-field--many">
+              <span class="form-field__caption">Gender</span>
+              <div class="form-field__row">
+                <label class="custom-radio">
+                  <input class="custom-radio__input visually-hidden" type="radio" name="gender" value="man" checked>
+                  <span class="custom-radio__item"></span>
+                  <span class="custom-radio__value">Man</span>
+                </label>
+
+                <label class="custom-radio">
+                  <input class="custom-radio__input visually-hidden" type="radio" name="gender" value="woman">
+                  <span class="custom-radio__item"></span>
+                  <span class="custom-radio__value">Woman</span>
+                </label>
+              </div>
+            </fieldset>
+            <label class="form-field form-field--big">
+              <span class="form-field__caption">Message</span>
+              <span class="form-field__score">0 / 140</span>
+              <textarea class="form-field__input" name="message" placeholder="Enter your message here" required></textarea>
+              <span class="form-field__alert">Error text</span>
+            </label>
+          </div>
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__input visually-hidden" type="checkbox" name="accept">
+            <span class="custom-checkbox__item"></span>
+            <span class="custom-checkbox__value">
+              By clicking on the button, you consent to the processing <a href="#">of data processing</a> and compiled with <a href="#">confidentiality documents</a>.
+            </span>
+          </label>
+          <button class="contacts-form__btn btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+    <!-- === QUESTIONS === -->
+    <section class="questions">
+      <div class="questions__container container">
+        <h2 class="questions__title title">Popular questions</h2>
+        <ul class="questions-list">
+          <li class="questions-list__item accordion">
+            <div class="accordion-header">
+              <h3 class="accordion-header__title accordion-header__title--liquidity title title--m">Liquidity</h3>
+              <span class="accordion-header__icon"></span>
+            </div>
+            <div class="accordion-body">
+              <p class="descr">
+                Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on.
+              </p>
+            </div>
+          </li>
+          <li class="questions-list__item accordion">
+            <div class="accordion-header">
+              <h3 class="accordion-header__title accordion-header__title--status title title--m">Status migration</h3>
+              <span class="accordion-header__icon"></span>
+            </div>
+            <div class="accordion-body">
+              <p class="descr">
+                Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on.
+              </p>
+            </div>
+          </li>
+          <li class="questions-list__item accordion">
+            <div class="accordion-header">
+              <h3 class="accordion-header__title accordion-header__title--team title title--m">Team</h3>
+              <span class="accordion-header__icon"></span>
+            </div>
+            <div class="accordion-body">
+              <p class="descr">
+                Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on.
+              </p>
+            </div>
+          </li>
+          <li class="questions-list__item accordion accordion--opened">
+            <div class="accordion-header">
+              <h3 class="accordion-header__title accordion-header__title--roadmap title title--m">Roadmap</h3>
+              <span class="accordion-header__icon"></span>
+            </div>
+            <div class="accordion-body">
+              <p class="descr">
+                Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on.
+              </p>
+            </div>
+          </li>
+          <li class="questions-list__item accordion">
+            <div class="accordion-header">
+              <h3 class="accordion-header__title accordion-header__title--legal title title--m">Legal</h3>
+              <span class="accordion-header__icon"></span>
+            </div>
+            <div class="accordion-body">
+              <p class="descr">
+                Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on.
+              </p>
+            </div>
+          </li>
+          <li class="questions-list__item accordion">
+            <div class="accordion-header">
+              <h3 class="accordion-header__title accordion-header__title--security title title--m">Security</h3>
+              <span class="accordion-header__icon"></span>
+            </div>
+            <div class="accordion-body">
+              <p class="descr">
+                Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on the economy has not yet been felt. Digital currencies made a lot of buzz in the past 10 years. In addition to a vast amount of terminology (cryptocurrency, blockchain, validation, etc.), hundreds of coins have appeared. But despite the significant figures for market cap, the actual impact on.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- === OFFER === -->
+    <section class="offer">
+      <div class="offer__container container">
+        <div class="offer-item">
+          <picture>
+            <source srcset="./img/offer/offer-bg-2.svg" media="(max-width: 767px)">
+            <img class="offer-item__image" src="./img/offer/offer-bg-1.svg" alt="Offer cover">
+          </picture>
+          <div class="offer-item__content">
+            <h2 class="offer-item__title title">Buy cryptocurrency now!</h2>
+            <p class="offer-item__descr descr">
+              Phasellus nam lacinia rhoncus id eget purus nulla er ultrices. Sapien dignissim dui, dignissim convalli nam lacinia er purus.
+            </p>
+            <a href="#" class="offer-item__btn btn btn--quaternary">Buy cryptocurrency</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- === FOOTER === -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer-top">
+        <div class="footer-top__follow footer-column">
+          <h2 class="footer-column__title">Follow Us</h2>
+          <ul class="footer-follow">
+            <li class="footer-follow__item">
+              <a href="#" class="footer-follow__link" target="_blank" aria-label="Facebook">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-follow__item">
+              <a href="#" class="footer-follow__link" target="_blank" aria-label="Twitter">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-follow__item">
+              <a href="#" class="footer-follow__link" target="_blank" aria-label="Instagram">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-follow__item">
+              <a href="#" class="footer-follow__link" target="_blank" aria-label="Youtube">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="footer-top__menu footer-column">
+          <h2 class="footer-column__title">Menu</h2>
+          <ul class="footer-menu">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">Home</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">Wallets</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">Merchants</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">All transactions</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-top__language footer-column">
+          <h2 class="footer-column__title">Language</h2>
+          <select class="dropdown-language" name="language">
+            <option value="" disabled hidden>Choose a language</option>
+            <option value="russian">Russian</option>
+            <option value="english" selected>English</option>
+          </select>
+        </div>
+        <div class="footer-top__support footer-support footer-column">
+          <h2 class="footer-column__title">24/7 Support</h2>
+        </div>
+        <div class="footer-top__social footer-social">
+          <div class="footer-social__image">
+            <picture>
+              <source srcset="./img/footer/footer-social.webp, ./img/footer/2x/footer-social@2x.jpeg 2x" type="image/webp">
+              <img src="./img/footer/footer-social.jpeg" srcset="./img/footer/2x/footer-social@2x.jpeg 2x" alt="Footer author">
+            </picture>
+          </div>
+          <h2 class="footer-social__title">Write to us</h2>
+          <ul class="footer-social__list footer-write">
+            <li class="footer-write__item">
+              <a href="#" class="footer-write__link" target="_blank" aria-label="Telegram">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#circle-telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-write__item">
+              <a href="#" class="footer-write__link" target="_blank" aria-label="Mail">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#circle-mail"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-write__item">
+              <a href="#" class="footer-write__link" target="_blank" aria-label="Facebook">
+                <svg>
+                  <use xlink:href="./img/sprite.svg#circle-facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-top__contacts footer-contacts">
+          <li class="footer-contacts__item">
+            <a href="mailto:allison_carder_@mail.com" class="footer-contacts__link footer-contacts__link--mail">Allison_Carder_@mail.com</a>
+          </li>
+          <li class="footer-contacts__item">
+            <a href="tel:+79000000000" class="footer-contacts__link footer-contacts__link--tel">+ 7 (900) 000 0000</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-descr descr">
+          Laborum exercitation non non nostrud non aliqua labore sit. Elit quis eu magna ex aliqua qui officia consectetur. Consectetur laboris fugiat dolore reprehenderit eiusmod officia. Sunt officia et nostrud cillum aliquip nostrud aliquip eiusmod est.
+        </p>
+        <a href="#" class="logo">
+          <img class="logo__image" src="./img/logo.svg" alt="Wallet logo">
+        </a>
+        <small class="footer-copyright">© 2019 <a href="#">PayPay</a> - Premium WordPress news & magazine theme by <a href="#">PayPay</a></small>
+      </div>
+    </div>
+  </footer>
+  <!-- === SCRIPTS === -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
