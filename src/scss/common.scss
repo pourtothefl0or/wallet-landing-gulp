@@ -1,0 +1,23 @@
+// === VENDOR ===
+@import './vendor/normalize';
+
+// === MIXINS ===
+@import './mixins/font-face';
+@import './mixins/breakpoints';
+
+// === BASE ===
+@import './global/variables';
+@import './global/fonts';
+@import './global/global';
+@import './global/uni';
+
+// === BLOCKS ===
+@import './blocks/header';
+@import './blocks/hero';
+@import './blocks/coins';
+@import './blocks/blog';
+@import './blocks/location';
+@import './blocks/contacts';
+@import './blocks/questions';
+@import './blocks/offer';
+@import './blocks/footer';

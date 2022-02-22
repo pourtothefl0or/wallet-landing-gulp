@@ -1,0 +1,84 @@
+// === BREAKPOINTS ===
+@mixin desktop($set) {
+  $size: 1440px;
+
+  @if $set == max {
+    @media (max-width: ($size - 1px)) {
+      @content;
+    }
+  } @else if $set == min {
+    @media (min-width: ($size)) {
+      @content;
+    }
+  }
+}
+
+@mixin minidesktop($set) {
+  $size: 1200px;
+
+  @if $set == max {
+    @media (max-width: ($size - 1px)) {
+      @content;
+    }
+  } @else if $set == min {
+    @media (min-width: ($size)) {
+      @content;
+    }
+  }
+}
+
+@mixin tablet($set) {
+  $size: 1024px;
+
+  @if $set == max {
+    @media (max-width: ($size - 1px)) {
+      @content;
+    }
+  } @else if $set == min {
+    @media (min-width: ($size)) {
+      @content;
+    }
+  }
+}
+
+@mixin minitablet($set) {
+  $size: 768px;
+
+  @if $set == max {
+    @media (max-width: ($size - 1px)) {
+      @content;
+    }
+  } @else if $set == min {
+    @media (min-width: ($size)) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile($set) {
+  $size: 576px;
+
+  @if $set == max {
+    @media (max-width: ($size - 1px)) {
+      @content;
+    }
+  } @else if $set == min {
+    @media (min-width: ($size)) {
+      @content;
+    }
+  }
+}
+
+@mixin minimobile($set) {
+  $size: 375px;
+
+  @if $set == max {
+    @media (max-width: ($size - 1px)) {
+      @content;
+    }
+  } @else if $set == min {
+    @media (min-width: ($size)) {
+      @content;
+    }
+  }
+}

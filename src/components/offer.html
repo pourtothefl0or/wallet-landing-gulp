@@ -1,0 +1,22 @@
+<!-- === OFFER === -->
+<section class="offer">
+  <div class="offer__container container">
+    <div class="offer-item">
+      <picture>
+        <source srcset="./images/offer/offer-bg-2.svg" media="(max-width: 767px)">
+        <img class="offer-item__image" src="./images/offer/offer-bg-1.svg" alt="Offer cover">
+      </picture>
+      <div class="offer-item__content">
+        <h2 class="offer-item__title title">Buy cryptocurrency now!</h2>
+        <p class="offer-item__descr descr">
+          Phasellus nam lacinia rhoncus id eget purus nulla er ultrices. Sapien dignissim dui, dignissim convalli nam lacinia er purus.
+        </p>
+        @@include('ui-button.html', {
+          'type': 'link',
+          'view': '4',
+          'text': 'Buy cryptocurrency'
+        })
+      </div>
+    </div>
+  </div>
+</section>

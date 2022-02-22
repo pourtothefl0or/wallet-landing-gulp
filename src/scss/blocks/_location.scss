@@ -1,0 +1,112 @@
+// === LOCATION ===
+.location {
+  overflow: hidden;
+  position: relative;
+  background-color: $color-white;
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-13%, -49%);
+  }
+
+  &__container {
+    padding-top: 127px;
+    padding-bottom: 127px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 5;
+    margin: 0 0 40px;
+  }
+
+  &__cities {
+    position: relative;
+    z-index: 5;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    $location__link: &;
+
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 8px 6px;
+    grid-template-areas:
+      "icon city"
+      "address address";
+    align-items: center;
+    color: $color-dusty-gray;
+
+    &-icon {
+      grid-area: icon;
+      width: 20px;
+      height: 20px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+        object-fit: cover;
+        transition: fill var(--primary-animation);
+      }
+    }
+
+    &-city {
+      grid-area: city;
+      margin: 0;
+      color: currentColor;
+      transition: color var(--primary-animation);
+    }
+
+    &-address {
+      grid-area: address;
+      margin: 0;
+      font-style: normal;
+      color: currentColor;
+    }
+
+    // >>> active, hover, focus
+    &--active,
+    &:hover,
+    &:focus {
+      #{$location__link}-icon svg {
+        fill: $color-governor-bay;
+      }
+
+      #{$location__link}-city {
+        color: $color-ebony-clay;
+      }
+    }
+  }
+
+  @include minitablet(max) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__image {
+      position: inherit;
+      width: 100%;
+      height: 364px;
+      object-fit: cover;
+      transform: unset;
+    }
+
+    &__container {
+      padding: 20px 35px 18px;
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      transform: translateX(-10px);
+    }
+  }
+}

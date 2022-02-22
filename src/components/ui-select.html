@@ -1,0 +1,11 @@
+<!-- === SELECT === -->
+<label class="form-field">
+  <select class="form-field__input form-field__input--dropdown" name="@@name" required>
+    <option value="" disabled hidden>Choose a variant</option>
+    @@for (var i = 0; i < arr.length; i++) {
+      <option value="`+arr[i]+`">`+arr[i]+`</option>
+    }
+  </select>
+  <span class="form-field__caption">@@title</span>
+  <span class="form-field__alert">Error text</span>
+</label>

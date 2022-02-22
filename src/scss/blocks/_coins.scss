@@ -1,0 +1,142 @@
+// === COINS ===
+.coins {
+  background-color: $color-white;
+
+  &__container {
+    padding-top: 178px;
+    padding-bottom: 60px;
+
+    @include tablet(max) {
+      padding-top: 70px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 var(--primary-indent);
+  }
+
+  &__descr {
+    margin: 0 0 64px;
+
+    @include tablet(max) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--coins-card), 1fr));
+    align-items: center;
+    gap: 47px 20px;
+  }
+
+  &-card {
+    $coins-card: &;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &__image {
+      width: var(--coins-card-image);
+      height: var(--coins-card-image);
+      object-fit: cover;
+      transition: transform var(--primary-animation);
+    }
+
+    &__abbr {
+      margin: 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: $color-ebony-clay;
+      transition: color var(--primary-animation);
+    }
+
+    &__name {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $color-dusty-gray;
+      transition: color var(--primary-animation);
+    }
+
+    // >>> hover, focus
+    &:hover,
+    &:focus {
+      #{$coins-card}__image {
+        transform: rotate(360deg);
+      }
+
+      #{$coins-card}__abbr,
+      #{$coins-card}__name {
+        color: $color-governor-bay;
+      }
+    }
+  }
+
+  &-other {
+    display: inline-block;
+    border: 1px dashed currentColor;
+    border-radius: var(--secondary-radius);
+    padding: 8px 17px;
+    font-weight: 500;
+    text-align: center;
+    color: $color-dusty-gray;
+    transition: color var(--primary-animation);
+
+    // >>> hover, focus
+    &:hover,
+    &:focus {
+      color: $color-governor-bay;
+    }
+  }
+
+  @include minitablet(min) {
+    .centered {
+      display: none;
+    }
+  }
+
+  @include minitablet(max) {
+    &-list {
+      row-gap: 24px;
+
+      // delete this!
+      &__item:not(:nth-of-type(-n+10)) {
+        display: none;
+      }
+    }
+
+    &-card {
+      display: grid;
+      grid-template-columns: var(--coins-card-image) 1fr;
+      grid-template-areas:
+        "image abbr"
+        "image name";
+      gap: 0 8px;
+
+      &__image {
+        grid-area: image;
+        width: var(--coins-card-image);
+        height: var(--coins-card-image);
+      }
+
+      &__abbr {
+        grid-area: abbr;
+        margin-bottom: 2px;
+      }
+
+      &__name {
+        grid-area: name;
+      }
+    }
+
+    .centered {
+      margin-top: 44px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "gulp-build",
+  "version": "1.0.0",
+  "description": "Gulp build for HTML intership",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "stylelint": "stylelint **/*.scss",
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Sergey Maksimenko",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "css-loader": "^6.5.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-mode": "^1.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-webp": "^4.0.1",
+    "prettier": "2.5.1",
+    "sass": "^1.45.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "browserslist": [
+    "last 3 version"
+  ]
+}

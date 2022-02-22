@@ -1,0 +1,106 @@
+<!-- === CONTACTS === -->
+<section class="contacts">
+  <div class="contacts__container container">
+    <h2 class="contacts__title title">Contacts us</h2>
+    <ul class="contacts-workers">
+      <li class="contacts-workers__item contacts-person">
+        <div class="contacts-person__image">
+          <div class="contacts-person-social">
+            <a href="#" class="contacts-person-social__link">
+              <svg>
+                <use xlink:href="./images/sprite.svg#circle-telegram"></use>
+              </svg>
+            </a>
+            <a href="#" class="contacts-person-social__link">
+              <svg>
+                <use xlink:href="./images/sprite.svg#circle-mail"></use>
+              </svg>
+            </a>
+          </div>
+          <picture>
+            <source srcset="./images/contacts/contacts-person-1.webp, ./images/contacts/2x/contacts-person-1@2x.webp 2x" type="image/webp">
+            <img src="./images/contacts/contacts-person-1.jpeg" srcset="./images/contacts/2x/contacts-person-1@2x.jpeg 2x" alt="Contacts person">
+          </picture>
+        </div>
+        <div class="contacts-person__info">
+          <p class="contacts-person__info-name">Ralph Edwards</p>
+          <p class="contacts-person__info-position">Community manager</p>
+        </div>
+      </li>
+      <li class="contacts-workers__item contacts-person">
+        <div class="contacts-person__image">
+          <div class="contacts-person-social">
+            <a href="#" class="contacts-person-social__link">
+              <svg>
+                <use xlink:href="./images/sprite.svg#circle-telegram"></use>
+              </svg>
+            </a>
+            <a href="#" class="contacts-person-social__link">
+              <svg>
+                <use xlink:href="./images/sprite.svg#circle-mail"></use>
+              </svg>
+            </a>
+          </div>
+          <picture>
+            <source srcset="./images/contacts/contacts-person-2.webp, ./images/contacts/2x/contacts-person-2@2x.webp 2x" type="image/webp">
+            <img src="./images/contacts/contacts-person-2.jpeg" srcset="./images/contacts/2x/contacts-person-2@2x.jpeg 2x" alt="Contacts person">
+          </picture>
+        </div>
+        <div class="contacts-person__info">
+          <p class="contacts-person__info-name">Arlene McCoy</p>
+          <p class="contacts-person__info-position">Community manager</p>
+        </div>
+      </li>
+    </ul>
+    <p class="contacts__descr descr">
+      Use this form to reach out to us
+    </p>
+    <form class="contacts-form" action="#" method="post">
+      <div class="contacts-form__items">
+        @@include('ui-input.html', {
+          "title": "Email",
+          "type": "email",
+          "name": "email",
+          "placeholder": "nick@example.com"
+        })
+        @@include('ui-input.html', {
+          "title": "Phone",
+          "type": "tel",
+          "name": "phone",
+          "placeholder": "+44 (000) 000-0000"
+        })
+        @@include('ui-select.html', {
+          "title": "Country",
+          "name": "country"
+        })
+        <fieldset class="form-field form-field--many">
+          <legend class="form-field__caption">Gender</legend>
+          <div class="form-field__row">
+            @@include('ui-radio.html', {
+              "name": "gender",
+              "value": "Man"
+            })
+            @@include('ui-radio.html', {
+              "name": "gender",
+              "value": "Woman"
+            })
+          </div>
+        </fieldset>
+        @@include('ui-textarea.html', {
+          "title": "Message",
+          "name": "message",
+          "placeholder": 'Enter your message here'
+        })
+      </div>
+      @@include('ui-checkbox.html', {
+        "name": "checkbox",
+        "value": "By clicking on the button, you consent to the processing <a href='#'>of data processing</a> and compiled with <a href='#'>confidentiality documents</a>"
+      })
+      @@include('ui-button.html', {
+        'type': 'button',
+        'view': '',
+        'text': 'Send a message'
+      })
+    </form>
+  </div>
+</section>

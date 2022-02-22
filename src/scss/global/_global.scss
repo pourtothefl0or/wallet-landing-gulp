@@ -1,0 +1,50 @@
+// === GLOBAL ===
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-ebony-clay;
+  background-color: $color-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--primary-animation);
+}
+
+// >>> hover, focus
+nav a:hover,
+nav a:focus {
+  border-color: currentColor;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

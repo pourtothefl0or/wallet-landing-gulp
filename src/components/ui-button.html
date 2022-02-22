@@ -1,0 +1,17 @@
+<!-- === BUTTON === -->
+@@if (type === 'button' && view !== '5') {
+  <button class="btn@@if(view === '2'){ btn--secondary}@@if(view === '3'){ btn--tertiary}@@if(view === '4'){ btn--quaternary}" type="submit">@@text</button>
+}
+
+@@if (type === 'button' && view === '5') {
+  <button class="btn btn--arrow">
+    @@text
+    <svg>
+      <use xlink:href="./images/sprite.svg#btn-arrow"></use>
+    </svg>
+  </button>
+}
+
+@@if (type === 'link') {
+  <a class="btn@@if(view === '2'){ btn--secondary}@@if(view === '3'){ btn--tertiary}@@if(view === '4'){ btn--quaternary}" href="#">@@text</a>
+}

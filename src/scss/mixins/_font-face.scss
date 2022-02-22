@@ -1,0 +1,10 @@
+// === FONT-FACE ===
+@mixin font-face($name, $url, $weight, $style) {
+  @font-face {
+    src: url("#{$url}.woff2") format("woff2"), url("#{$url}.woff") format("woff");
+    font-family: "#{$name}";
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
