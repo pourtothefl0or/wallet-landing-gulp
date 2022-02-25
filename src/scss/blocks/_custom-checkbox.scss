@@ -1,0 +1,101 @@
+// === CUSTOM-CHECKBOX ===
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  // .custom-checkbox__item
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    border: 1px solid $color-iron;
+    border-radius: var(--primary-radius);
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    transition:
+      border-color var(--primary-animation);
+
+    // .custom-checkbox__item::before
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 24px;
+      height: 24px;
+      transform: translate(-50%, -50%);
+      background-image: url("../images/icons/checkbox-checked.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity var(--primary-animation),
+        visibility var(--primary-animation);
+
+      // >>> .custom-checkbox__input:checked .custom-checkbox__item::before
+      .custom-checkbox__input:checked ~ & {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      // >>> .custom-checkbox__input:disabled .custom-checkbox__item::before
+      .custom-checkbox__input:not(:disabled):hover ~ & {
+        opacity: 0.2;
+        visibility: visible;
+      }
+    }
+
+    // >>> .custom-checkbox__input:checked .custom-checkbox__item
+    .custom-checkbox__input:checked ~ & {
+      border-color: $color-governor-bay;
+    }
+
+    // >>> .custom-checkbox__input:disabled .custom-checkbox__item
+    .custom-checkbox__input:disabled ~ & {
+      border-color: $color-iron;
+    }
+
+    // >>> .custom-checkbox__input:focus .custom-checkbox__item
+    // >>> .custom-checkbox__input:hover .custom-checkbox__item
+    .custom-checkbox__input:focus ~ &,
+    .custom-checkbox__input:not(:disabled):hover ~ & {
+      border-color: $color-governor-bay;
+    }
+  }
+
+  // .custom-checkbox__value
+  &__value {
+    display: block;
+    margin: 0;
+    padding-left: 29px;
+    font-size: 12px;
+    line-height: 17px;
+    color: $color-scarpa-flow;
+    transition: color var(--primary-animation);
+
+    // >>> .custom-checkbox__input:disabled .custom-checkbox__value
+    .custom-checkbox__input:disabled ~ & {
+      color: $color-iron;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      transition:
+        color var(--primary-animation),
+        text-decoration-color var(--primary-animation);
+
+      /// a:hover
+      &:hover {
+        color: $color-governor-bay;
+      }
+    }
+  }
+}

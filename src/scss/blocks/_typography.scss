@@ -1,0 +1,52 @@
+// === TYPOGRAPHY ===
+// --- TITLE ---
+// xxl: fw700, fz48, lh62 => fz34, lh44
+// xl: fw700, fz40, lh52 => fz28, lh36
+// l: fw700, fz32, lh42 =>  ???
+// m: fw600, fz28, lh36 => fz18, lh23
+// s: fw600, fz20, lh24 => fz18, lh23
+// xs: fw500, fz20, lh24 => fz18, lh22
+// xxs: fw400, fz20, lh24 => ???
+
+.title {
+  // default: xl
+  font-weight: 700;
+  font-size: var(--title-xl-fz);
+  line-height: var(--title-xl-lh);
+  color: $color-ebony-clay;
+
+  // .title--xxl
+  &--xxl {
+    font-size: var(--title-xxl-fz);
+    line-height: var(--title-xxl-lh);
+  }
+
+  // .title--m
+  &--m {
+    font-weight: 600;
+    font-size: var(--title-m-fz);
+    line-height: var(--title-m-lh);
+  }
+
+  // .title--xs
+  &--xs {
+    font-weight: 500;
+    font-size: var(--title-xs-fz);
+    line-height: var(--title-xs-lh);
+  }
+}
+
+// --- DESCR ---
+// xxl:
+// xl: fw400, fz16, lh22 => fz14, lh20
+// l:
+// m:
+// s:
+
+.descr {
+  // >>> default: xl
+  font-weight: 400;
+  font-size: var(--descr-xl-fz);
+  line-height: var(--descr-xl-lh);
+  color: $color-dusty-gray;
+}

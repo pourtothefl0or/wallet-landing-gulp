@@ -19,35 +19,23 @@ const sass = gulpSass(dartSass);
 export function styles() {
   return src(paths.src.styles)
     .pipe(mode.development(gulpSourcemaps.init()))
-    .pipe(
-      gulpPlumber(
-        notify.onError({
-          title: 'SCSS',
-          message: 'Error: <%= error.message %>',
-        })
-      )
-    )
-    .pipe(
-      sass({
-        outputStyle: 'expanded',
-      })
-    )
+    .pipe(gulpPlumber(notify.onError({
+      title: 'SCSS',
+      message: 'Error: <%= error.message %>',
+    })))
+    .pipe(sass({
+      outputStyle: 'expanded',
+    }))
     .pipe(mode.production(groupCssMediaQueries()))
-    .pipe(
-      mode.production(
-        autoPrefixer({
-          grid: true,
-          cascade: true,
-        })
-      )
-    )
+    .pipe(mode.production(autoPrefixer({
+      grid: true,
+      cascade: true,
+    })))
     .pipe(dest(paths.dist.styles))
     .pipe(mode.production(cleanCss()))
-    .pipe(
-      rename({
-        extname: '.min.css',
-      })
-    )
+    .pipe(rename({
+      extname: '.min.css',
+    }))
     .pipe(mode.development(gulpSourcemaps.write()))
     .pipe(dest(paths.dist.styles))
     .pipe(browserSync.stream());

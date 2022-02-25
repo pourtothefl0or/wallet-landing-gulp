@@ -4,6 +4,7 @@
   position: relative;
   background-color: $color-ebony-clay;
 
+  // .hero__image
   &__image {
     position: absolute;
     top: 50%;
@@ -11,37 +12,45 @@
     transform: translateY(-52%);
   }
 
+  // .hero__container
   &__container {
     padding-top: 205px;
     padding-bottom: 250px;
   }
 
+  // .hero__content
   &__content {
     position: relative;
     z-index: 5;
     max-width: 510px;
   }
 
+  // .hero__title
   &__title {
     margin: 0 0 var(--primary-indent);
     color: $color-white;
   }
 
+  // .hero__descr
   &__descr {
     margin: 0 0 60px;
     color: $color-white;
   }
 
+  // MEDIA
   @include tablet(max) {
+    // .hero__image
     &__image {
       left: 50%;
     }
 
+    // .hero__container
     &__container {
       padding-top: 150px;
       padding-bottom: 200px;
     }
 
+    // .hero__descr
     &__descr {
       margin-bottom: 33px;
       font-size: 16px;
@@ -49,7 +58,9 @@
     }
   }
 
+  // MEDIA
   @include minitablet(max) {
+    // .hero__image
     &__image {
       top: initial;
       left: 50%;
@@ -57,18 +68,23 @@
       transform: translateX(-50%);
     }
 
+    // .hero__container
     &__container {
       padding-top: 67px;
       padding-bottom: 414px;
     }
 
+    // .hero__content
     &__content {
       max-width: initial;
       text-align: center;
     }
 
-    &__descr br {
-      display: none;
+    // .hero__descr
+    &__descr {
+      br {
+        display: none;
+      }
     }
   }
 }
@@ -79,55 +95,62 @@
   flex-wrap: wrap;
   gap: 32px;
 
+  // MEDIA
   @include minitablet(max) {
+    justify-content: center;
     gap: 25px;
   }
+}
 
-  &__link {
-    display: block;
-    transition: transform var(--primary-animation);
+// === APPS-LINK ===
+.apps-link {
+  display: block;
+  transition: transform var(--primary-animation);
 
-    // >>> hover, focus
-    &:hover,
-    &:focus {
-      transform: scale(var(--primary-scale));
-    }
-
-    &-image {
-      width: 140px;
-      height: 42px;
-      object-fit: cover;
-    }
+  // .apps-link__image
+  &__image {
+    width: 140px;
+    height: 42px;
+    object-fit: cover;
   }
 
-  &-item {
-    &__rate {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 12px;
-      color: $color-white;
+  // >>> .apps__link:hover
+  // >>> .apps__link:focus
+  &:hover,
+  &:focus {
+    transform: scale(var(--primary-scale));
+  }
+}
 
-      @include minitablet(max) {
-        display: none;
-      }
+// === APPS-RATE ===
+.apps-rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: $color-white;
 
-      &-value {
-        margin: 0;
-        padding-right: 22px;
-        font-size: 20px;
-        line-height: 24px;
-        background-image: url("../images/icons/rate-star.svg");
-        background-size: 16px;
-        background-position: right center;
-        background-repeat: no-repeat;
-      }
+  // .apps-rate__value
+  &__value {
+    margin: 0;
+    padding-right: 22px;
+    font-size: 20px;
+    line-height: 24px;
+    background-image: url("../images/icons/rate-star.svg");
+    background-size: 16px;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
 
-      &-reviews {
-        margin: 0;
-        font-size: 14px;
-        line-height: 17px;
-      }
-    }
+  // .apps-rate__reviews
+  &__reviews {
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    display: none;
   }
 }

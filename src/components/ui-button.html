@@ -1,9 +1,13 @@
 <!-- === BUTTON === -->
-@@if (type === 'button' && view !== '5') {
-  <button class="btn@@if(view === '2'){ btn--secondary}@@if(view === '3'){ btn--tertiary}@@if(view === '4'){ btn--quaternary}" type="submit">@@text</button>
+@@if (type === 'button' && view === '') {
+  <button class="btn" type="submit">@@text</button>
 }
 
-@@if (type === 'button' && view === '5') {
+@@if (type === 'button' && view !== '' && view !== 'arrow') {
+  <button class="btn btn--@@view" type="submit">@@text</button>
+}
+
+@@if (type === 'button' && view === 'arrow') {
   <button class="btn btn--arrow">
     @@text
     <svg>
@@ -12,6 +16,10 @@
   </button>
 }
 
-@@if (type === 'link') {
-  <a class="btn@@if(view === '2'){ btn--secondary}@@if(view === '3'){ btn--tertiary}@@if(view === '4'){ btn--quaternary}" href="#">@@text</a>
+@@if (type === 'link' && view === '') {
+  <a class="btn" href="#">@@text</a>
+}
+
+@@if (type === 'link' && view !== '') {
+  <a class="btn btn--@@view" href="#">@@text</a>
 }

@@ -9,7 +9,16 @@
 @import './global/variables';
 @import './global/fonts';
 @import './global/global';
-@import './global/uni';
+
+// === SMALL COMPONENTS ===
+@import './blocks/container';
+@import './blocks/logo';
+@import './blocks/typography';
+@import './blocks/btn';
+@import './blocks/form-field';
+@import './blocks/custom-radio';
+@import './blocks/custom-checkbox';
+@import './blocks/dropdown-language';
 
 // === BLOCKS ===
 @import './blocks/header';

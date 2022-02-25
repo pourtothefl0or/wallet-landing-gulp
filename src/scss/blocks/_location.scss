@@ -4,6 +4,7 @@
   position: relative;
   background-color: $color-white;
 
+  // .location__image
   &__image {
     position: absolute;
     top: 50%;
@@ -11,86 +12,25 @@
     transform: translate(-13%, -49%);
   }
 
+  // .location__container
   &__container {
     padding-top: 127px;
     padding-bottom: 127px;
   }
 
+  // .location__title
   &__title {
     position: relative;
     z-index: 5;
     margin: 0 0 40px;
   }
 
-  &__cities {
-    position: relative;
-    z-index: 5;
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  &__link {
-    $location__link: &;
-
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    gap: 8px 6px;
-    grid-template-areas:
-      "icon city"
-      "address address";
-    align-items: center;
-    color: $color-dusty-gray;
-
-    &-icon {
-      grid-area: icon;
-      width: 20px;
-      height: 20px;
-
-      svg {
-        width: 100%;
-        height: 100%;
-        fill: currentColor;
-        object-fit: cover;
-        transition: fill var(--primary-animation);
-      }
-    }
-
-    &-city {
-      grid-area: city;
-      margin: 0;
-      color: currentColor;
-      transition: color var(--primary-animation);
-    }
-
-    &-address {
-      grid-area: address;
-      margin: 0;
-      font-style: normal;
-      color: currentColor;
-    }
-
-    // >>> active, hover, focus
-    &--active,
-    &:hover,
-    &:focus {
-      #{$location__link}-icon svg {
-        fill: $color-governor-bay;
-      }
-
-      #{$location__link}-city {
-        color: $color-ebony-clay;
-      }
-    }
-  }
-
+  // MEDIA
   @include minitablet(max) {
     display: flex;
     flex-direction: column-reverse;
 
+    // .location__image
     &__image {
       position: inherit;
       width: 100%;
@@ -99,14 +39,92 @@
       transform: unset;
     }
 
+    // .location__container
     &__container {
       padding: 20px 35px 18px;
       width: 100%;
     }
 
+    // .location__title
     &__title {
       margin-bottom: 24px;
       transform: translateX(-10px);
+    }
+  }
+}
+
+// === LOCATION-CITIES ===
+.location-cities {
+  position: relative;
+  z-index: 5;
+  display: inline-flex;
+  flex-direction: column;
+
+  // .location-cities__item
+  &__item {
+    // .location-cities__item:not(:last-child)
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// === LOCATION-LINK ===
+.location-link {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 8px 6px;
+  grid-template-areas:
+    "icon city"
+    "address address";
+  align-items: center;
+  color: $color-dusty-gray;
+
+  // .location-link__icon
+  &__icon {
+    grid-area: icon;
+    width: 20px;
+    height: 20px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+      object-fit: cover;
+      transition: fill var(--primary-animation);
+    }
+  }
+
+  // .location-link__city
+  &__city {
+    grid-area: city;
+    margin: 0;
+    color: currentColor;
+    transition: color var(--primary-animation);
+  }
+
+  // .location-link__address
+  &__address {
+    grid-area: address;
+    margin: 0;
+    font-style: normal;
+    color: currentColor;
+  }
+
+  // >>> .location-link--active
+  // >>> .location-link:hover
+  // >>> .location-link:focus
+  &--active,
+  &:hover,
+  &:focus {
+    .location-link__icon {
+      svg {
+        fill: $color-governor-bay;
+      }
+    }
+
+    .location-link__city {
+      color: $color-ebony-clay;
     }
   }
 }

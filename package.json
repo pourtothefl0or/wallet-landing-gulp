@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "stylelint": "stylelint **/*.scss",
-    "dev": "gulp",
-    "build": "gulp build"
+    "dev": "gulp --development",
+    "build": "gulp build --production"
   },
   "author": "Sergey Maksimenko",
   "license": "ISC",
@@ -28,6 +28,10 @@
     "gulp-real-favicon": "^0.3.2",
     "gulp-sass": "^5.0.0",
     "gulp-webp": "^4.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
     "prettier": "2.5.1",
     "sass": "^1.45.0",
     "style-loader": "^3.3.1",

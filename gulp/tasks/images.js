@@ -6,33 +6,39 @@ import browserSync from 'browser-sync';
 import newer from 'gulp-newer';
 import webp from 'gulp-webp';
 import imagemin from 'gulp-imagemin';
+import imageminGifsicle from 'imagemin-gifsicle';
+import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminOptipng from 'imagemin-optipng';
+import imageminSvgo from 'imagemin-svgo';
+
 import gulpMode from 'gulp-mode';
 
-const { src, dest } = gulp;
-
 const mode = gulpMode();
+const { src, dest } = gulp;
 
 export function images() {
   return src(paths.src.img)
-    .pipe(
-      gulpPlumber(
-        notify.onError({
-          title: 'IMAGES',
-          message: 'Error: <%= error.message %>',
-        })
-      )
-    )
+    .pipe(gulpPlumber(notify.onError({
+      title: 'IMAGES',
+      message: 'Error: <%= error.message %>',
+    })))
     .pipe(newer(paths.dist.img))
     .pipe(webp())
     .pipe(dest(paths.dist.img))
     .pipe(src(paths.src.img))
     .pipe(newer(paths.dist.img))
-    .pipe(mode.production(imagemin({
-      progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
-      interlaced: true,
-      optimizationLevel: 3
-    })))
+    .pipe(mode.production(imagemin([
+      imageminGifsicle({ interlaced: true }),
+      imageminMozjpeg({ quality: 75, progressive: true }),
+      imageminOptipng({ optimizationLevel: 5 }),
+      imageminSvgo({
+        plugins: [
+          { name: 'removeViewBox', active: true },
+          { name: 'cleanupIDs', active: false },
+          { name: 'removeUselessDefs', active: false }
+        ]
+      })
+    ])))
     .pipe(dest(paths.dist.img))
     .pipe(browserSync.stream());
 }

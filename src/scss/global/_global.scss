@@ -26,15 +26,18 @@ a {
   text-decoration: none;
 }
 
-nav a {
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--primary-animation);
-}
+nav {
+  a {
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--primary-animation);
 
-// >>> hover, focus
-nav a:hover,
-nav a:focus {
-  border-color: currentColor;
+    // a:focus
+    // a:hover
+    &:focus,
+    &:hover {
+      border-color: currentColor;
+    }
+  }
 }
 
 ul {
@@ -47,4 +50,24 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-disabled {
+  overflow: hidden;
 }

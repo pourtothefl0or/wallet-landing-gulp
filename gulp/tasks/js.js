@@ -12,30 +12,22 @@ const isProduction = mode.production();
 
 export function js() {
   return src(paths.src.js)
-    .pipe(
-      gulpPlumber(
-        notify.onError({
-          title: 'JS',
-          message: 'Error: <%= error.message %>',
-        })
-      )
-    )
-    .pipe(
-      webpackStream({
-        mode: isProduction ? 'production' : 'development',
-        output: {
-          filename: 'app.min.js',
-        },
-        module: {
-          rules: [
-            {
-              test: /\.css$/i,
-              use: ['style-loader', 'css-loader'],
-            },
-          ],
-        },
-      })
-    )
+    .pipe(gulpPlumber(notify.onError({
+      title: 'JS',
+      message: 'Error: <%= error.message %>',
+    })))
+    .pipe(webpackStream({
+      mode: isProduction ? 'production' : 'development',
+      output: {
+        filename: 'app.min.js',
+      },
+      module: {
+        rules: [{
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        }],
+      },
+    }))
     .pipe(dest(paths.dist.js))
     .pipe(browserSync.stream());
 }

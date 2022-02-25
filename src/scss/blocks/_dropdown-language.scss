@@ -1,0 +1,30 @@
+// === DROPDOWN-LANGUAGE ===
+.dropdown-language {
+  border: 1px solid transparent;
+  border-radius: var(--primary-radius);
+  padding: 6px 15px;
+  min-width: 191px;
+  min-height: 38px;
+  color: $color-white;
+  background: $color-scarpa-flow;
+  background-image: url("../images/icons/dropdown-arrow-white.svg");
+  background-size: 24px;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition:
+    color var(--primary-animation),
+    border-color var(--primary-animation);
+
+  // >>> .dropdown-language:disabled
+  &:disabled {
+    color: $color-iron;
+  }
+
+  // >>> .dropdown-language:hover
+  &:not(:disabled):hover {
+    border-color: $color-white;
+  }
+}

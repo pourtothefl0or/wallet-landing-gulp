@@ -7,11 +7,7 @@ const { src, dest } = gulp;
 
 export function html() {
   return src([paths.src.html, '!src/include/**/*.html'])
-    .pipe(fileinclude({
-      context: {
-        arr: ['United Kingdom', 'United States', 'Russia', 'Ukraine']
-      }
-    }))
+    .pipe(fileinclude())
     .pipe(dest(paths.distFolder))
     .pipe(browserSync.stream());
 }

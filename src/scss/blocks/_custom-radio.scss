@@ -1,0 +1,106 @@
+// === CUSTOM-RADIO ===
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  // .custom-radio__item
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    border: 1px solid $color-governor-bay;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+
+    // .custom-radio__item::before
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, -50%);
+      background-image: url("../images/icons/radio-checked.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity var(--primary-animation),
+        visibility var(--primary-animation);
+
+      // >>> .custom-radio__input:focus .custom-radio__item::before
+      .custom-radio__input:focus ~ & {
+        animation: radio-focus 1.5s ease-in-out infinite;
+      }
+
+      // >>> .custom-radio__input:checked .custom-radio__item::before
+      .custom-radio__input:checked ~ & {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      // >>> .custom-radio__input:hover .custom-radio__item::before
+      .custom-radio__input:not(:disabled):hover ~ & {
+        opacity: 0.2;
+        visibility: visible;
+      }
+    }
+
+    // .custom-radio__input:disabled .custom-radio__item
+    .custom-radio__input:disabled ~ & {
+      border-color: $color-iron;
+    }
+  }
+
+  // .custom-radio__value
+  &__value {
+    display: block;
+    margin: 0;
+    padding-left: 29px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-ebony-clay;
+    transition: color var(--primary-animation);
+
+    // >>> .custom-radio__input:disabled .custom-radio__value
+    .custom-radio__input:disabled ~ & {
+      color: $color-iron;
+    }
+
+    // >>> .custom-radio__input:focus .custom-radio__value
+    // >>> .custom-radio__input:hover .custom-radio__value
+    .custom-radio__input:focus ~ &,
+    .custom-radio__input:not(:disabled):hover ~ & {
+      color: $color-governor-bay;
+    }
+  }
+
+  // ANIMATION
+  @keyframes radio-focus {
+    0% {
+      width: 20px;
+      height: 20px;
+      background-size: 20px;
+    }
+
+    50% {
+      width: calc(20px / 1.5);
+      height: calc(20px / 1.5);
+      background-size: calc(20px / 1.5);
+    }
+
+    100% {
+      width: 20px;
+      height: 20px;
+      background-size: 20px;
+    }
+  }
+}

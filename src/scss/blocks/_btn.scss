@@ -1,0 +1,156 @@
+// === BTN ===
+.btn {
+  // default: primary
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: var(--primary-radius);
+  padding: 11px 35px;
+  min-width: 200px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: $color-governor-bay;
+  background: $color-link-water;
+  cursor: pointer;
+  transition:
+    border-color var(--primary-animation),
+    color var(--primary-animation),
+    background var(--primary-animation);
+
+  // .btn--secondary
+  &--secondary {
+    color: $color-white;
+    background: $color-governor-bay;
+  }
+
+  // .btn--tertiary
+  &--tertiary {
+    border-color: $color-white;
+    background: transparent;
+    color: $color-white;
+
+    // >>> .btn--tertiary:disabled
+    &:disabled {
+      border-color: $color-storm-gray;
+      background: transparent;
+      color: $color-storm-gray;
+    }
+
+    // >>> .btn--tertiary:focus
+    // >>> .btn--tertiary:hover
+    &:focus,
+    &:not(:disabled):hover {
+      border-color: transparent;
+      background: $color-link-water;
+      color: $color-governor-bay;
+    }
+
+    // MEDIA
+    @include minitablet(max) {
+      border: transparent;
+      color: $color-white;
+      background: $color-governor-bay;
+    }
+  }
+
+  // .btn--quaternary
+  &--quaternary {
+    padding-left: 44px;
+    padding-right: 44px;
+    color: $color-governor-bay;
+    background: $color-white;
+  }
+
+  // .btn--arrow
+  &--arrow {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 5px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      transition: transform var(--primary-animation);
+    }
+
+    // >>> .btn--arrow-active
+    &-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // >>> btn:disabled
+  &:disabled {
+    color: $color-cornflower-blue;
+    background: $color-white-lilac;
+    cursor: auto;
+  }
+
+  // >>> btn:focus
+  // >>> btn:hover
+  &:focus,
+  &:not(:disabled):hover {
+    border-color: transparent;
+    color: $color-white;
+    background: $color-cornflower-blue;
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    padding: 10px 70px;
+  }
+}
+
+// === BTN-MENU ===
+.btn-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4px;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    width var(--primary-animation),
+    height var(--primary-animation);
+
+  span {
+    display: block;
+    border-radius: var(--primary-radius);
+    width: 20px;
+    height: 2px;
+    background-color: $color-white;
+    transition:
+      width var(--primary-animation),
+      opacity var(--primary-animation),
+      transform var(--primary-animation);
+  }
+
+  // >>> .btn-menu--active
+  &--active {
+    width: 44px;
+    height: 44px;
+
+    span {
+      width: 32px;
+
+      &:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+  }
+}

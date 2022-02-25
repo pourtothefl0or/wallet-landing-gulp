@@ -2,43 +2,156 @@
 .questions {
   background-color: $color-white;
 
+  // .questions__container
   &__container {
     padding-top: 56px;
     padding-bottom: 100px;
   }
 
+  // .questions__title
   &__title {
     margin: 0 0 40px;
   }
 
-  &-list__item:not(:last-child) {
-    margin-bottom: 21px;
-  }
-
   @include tablet(max) {
+    // .questions__container
     &__container {
       padding-top: 37px;
       padding-bottom: 60px;
     }
 
+    // .questions__title
     &__title {
       margin-bottom: 25px;
     }
+  }
+}
 
-    &-list {
-      padding: 0 11px;
+// .QUESTIONS-LIST
+.questions-list {
+  // .questions-list__item
+  &__item {
+    // .questions-list__item:not(:last-child)
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
 
-      &__item:not(:last-child) {
+  // MEDIA
+  @include tablet(max) {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    // .questions-list__item
+    &__item {
+      // .questions-list__item:not(:last-child)
+      &:not(:last-child) {
         margin-bottom: 30px;
       }
     }
   }
 }
 
+// === ACCORDION-HEADER ===
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // .accordion-header__title
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-left: 72px;
+
+     // .accordion-header__title::before
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 0;
+      width: 48px;
+      height: 48px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    // .accordion-header__title--liquidity::before
+    &--liquidity::before {
+      background-image: url("../images/icons/liquidity.svg");
+    }
+
+    // .accordion-header__title--status::before
+    &--status::before {
+      background-image: url("../images/icons/status.svg");
+    }
+
+    // .accordion-header__title--team::before
+    &--team::before {
+      background-image: url("../images/icons/team.svg");
+    }
+
+    // .accordion-header__title--roadmap::before
+    &--roadmap::before {
+      background-image: url("../images/icons/roadmap.svg");
+    }
+
+    // .accordion-header__title--legal::before
+    &--legal::before {
+      background-image: url("../images/icons/legal.svg");
+    }
+
+    // .accordion-header__title--security::before
+    &--security::before {
+      background-image: url("../images/icons/security.svg");
+    }
+
+    // MEDIA
+    @include tablet(max) {
+      padding-left: 50px;
+
+      // .accordion-header__title::before
+      &::before {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+
+  // .accordion-header__icon
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+
+    // .accordion-header__icon::before
+    // .accordion-header__icon::after
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 21px;
+      height: 2px;
+      background-color: $color-scarpa-flow;
+      transform: translate(-50%, -50%);
+      transition: transform var(--primary-animation);
+    }
+
+    // .accordion-header__icon::after
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
 // === ACCORDION ===
 .accordion {
-  $accordion: &;
-
   display: block;
   box-shadow: 0 4px 11px rgba(56, 57, 77, 0.1);
   border-radius: var(--secondary-radius);
@@ -47,81 +160,13 @@
   transition: background-color var(--primary-animation);
   cursor: pointer;
 
-  &-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__title {
-      position: relative;
-      margin: 0;
-      padding-left: 72px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 50%;
-        left: 0;
-        width: 48px;
-        height: 48px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transform: translateY(-50%);
-      }
-
-      &--liquidity::before {
-        background-image: url("../images/icons/liquidity.svg");
-      }
-
-      &--status::before {
-        background-image: url("../images/icons/status.svg");
-      }
-
-      &--team::before {
-        background-image: url("../images/icons/team.svg");
-      }
-
-      &--roadmap::before {
-        background-image: url("../images/icons/roadmap.svg");
-      }
-
-      &--legal::before {
-        background-image: url("../images/icons/legal.svg");
-      }
-
-      &--security::before {
-        background-image: url("../images/icons/security.svg");
-      }
-    }
-
-    &__icon {
-      position: relative;
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 21px;
-        height: 2px;
-        background-color: $color-scarpa-flow;
-        transform: translate(-50%, -50%);
-        transition: transform var(--primary-animation);
-      }
-
-      &::after {
-        transform: translate(-50%, -50%) rotate(90deg);
-      }
-    }
+  // MEDIA
+  @include tablet(max) {
+    padding: 19px 12px 19px 16px;
   }
 
-  &-body {
+  // .accordion__body
+  &__body {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
@@ -137,40 +182,26 @@
     }
   }
 
-  // >>> opened
+  // >>> .accordion--opened
   &--opened {
     padding-bottom: 40px;
     background-color: #fafafa;
 
-    #{$accordion} {
-      &-header__icon::after {
+    .accordion-header__icon {
+      // .accordion-header__icon::after
+      &::after {
         transform: translate(-50%, -50%) rotate(180deg);
       }
     }
 
-    #{$accordion}-body {
+    .accordion__body {
       margin-top: 45px;
       max-height: 100%;
       opacity: 1;
       visibility: visible;
-    }
-  }
 
-  @include tablet(max) {
-    padding: 19px 12px 19px 16px;
-
-    &-header__title {
-      padding-left: 50px;
-
-      &::before {
-        width: 38px;
-        height: 38px;
-      }
-    }
-
-    // >>> opened
-    &--opened {
-      #{$accordion}-body {
+      // MEDIA
+      @include tablet(max) {
         margin-top: 16px;
       }
     }

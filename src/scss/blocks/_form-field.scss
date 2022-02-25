@@ -1,0 +1,143 @@
+// === FORM-FIELD ===
+.form-field {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "caption score"
+    "input input";
+  gap: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  // .form-field__caption
+  &__caption {
+    grid-area: caption;
+    display: block;
+    margin: 0;
+    color: $color-scarpa-flow;
+
+    // .form-field__caption
+    .form-field--many & {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    // .form-field__input:disabled .form-field__caption
+    .form-field__input:disabled ~ & {
+      color: $color-iron;
+    }
+  }
+
+  // .form-field__score
+  &__score {
+    grid-area: score;
+    justify-self: flex-end;
+    display: block;
+    margin: 0;
+    color: $color-scarpa-flow;
+  }
+
+  // .form-field__row
+  &__row {
+    display: flex;
+    gap: 36px;
+  }
+
+  // .form-field__input
+  &__input {
+    grid-area: input;
+    border: 1px solid $color-iron;
+    border-radius: var(--primary-radius);
+    padding: 10px 10px 10px 16px;
+    width: 100%;
+    min-height: 44px;
+    background: #f6f6f6;
+    caret-color: $color-governor-bay;
+    transition: border-color var(--primary-animation);
+
+    // .form-field__input
+    .form-field--big & {
+      min-height: 98px;
+      resize: vertical;
+    }
+
+    // .form-field__input::placeholder
+    &::placeholder {
+      color: $color-dusty-gray;
+    }
+
+    // >>> .form-field__input:disabled::placeholder
+    &:disabled::placeholder {
+      color: $color-iron;
+    }
+
+    // >>> .form-field__input:focus
+    // >>> .form-field__input:hover
+    &:focus,
+    &:not(:disabled):hover {
+      border-color: $color-governor-bay;
+    }
+
+    // form-field__input--dropdown
+    &--dropdown {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      color: $color-ebony-clay;
+      background-image: url("../images/icons/dropdown-arrow.svg");
+      background-size: 24px;
+      background-position: right 10px center;
+      background-repeat: no-repeat;
+
+      // >>> form-field__input--dropdown:disabled
+      &:disabled {
+        color: $color-iron;
+      }
+    }
+  }
+
+  // .form-field__alert
+  &__alert {
+    grid-area: alert;
+    display: none;
+    margin: 10px 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-mandy;
+  }
+
+  // .form-field--many
+  &--many {
+    display: block;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+    // >>> .form-field--error
+  &--error {
+    grid-template-areas:
+    "caption score"
+    "input input"
+    "alert alert";
+
+    .form-field {
+      // .form-field__input
+      &__input {
+        border-color: $color-mandy;
+      }
+
+      // .form-field__score
+      &__score {
+        color: $color-mandy;
+      }
+
+      // .form-field__alert
+      &__alert {
+        display: block;
+      }
+    }
+  }
+}
