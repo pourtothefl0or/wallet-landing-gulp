@@ -1,0 +1,50 @@
+// === BTN-MENU ===
+.btn-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4px;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    width var(--primary-animation),
+    height var(--primary-animation);
+
+  span {
+    display: block;
+    border-radius: var(--primary-radius);
+    width: 20px;
+    height: 2px;
+    background-color: $color-white;
+    transition:
+      width var(--primary-animation),
+      opacity var(--primary-animation),
+      transform var(--primary-animation);
+  }
+
+  // >>> .btn-menu--active
+  &--active {
+    width: 44px;
+    height: 44px;
+
+    span {
+      width: 32px;
+
+      &:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// === FOOTER-SUPPORT ===
+.footer-support {
+  .footer-column-title {
+    margin: 0;
+  }
+
+  // MEDIA
+  @include tablet(min) {
+    grid-area: support;
+    grid-column: 3 span;
+    margin: 39px 0 21px;
+  }
+}

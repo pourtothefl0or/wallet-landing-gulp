@@ -1,0 +1,90 @@
+// === HERO ===
+.hero {
+  overflow: hidden;
+  position: relative;
+  background-color: $color-ebony-clay;
+
+  // .hero__image
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-52%);
+  }
+
+  // .hero__container
+  &__container {
+    padding-top: 205px;
+    padding-bottom: 250px;
+  }
+
+  // .hero__content
+  &__content {
+    position: relative;
+    z-index: 5;
+    max-width: 510px;
+  }
+
+  // .hero__title
+  &__title {
+    margin: 0 0 var(--primary-indent);
+    color: $color-white;
+  }
+
+  // .hero__descr
+  &__descr {
+    margin: 0 0 60px;
+    color: $color-white;
+  }
+
+  // MEDIA
+  @include tablet(max) {
+    // .hero__image
+    &__image {
+      left: 50%;
+    }
+
+    // .hero__container
+    &__container {
+      padding-top: 150px;
+      padding-bottom: 200px;
+    }
+
+    // .hero__descr
+    &__descr {
+      margin-bottom: 33px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    // .hero__image
+    &__image {
+      top: initial;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    // .hero__container
+    &__container {
+      padding-top: 67px;
+      padding-bottom: 414px;
+    }
+
+    // .hero__content
+    &__content {
+      max-width: initial;
+      text-align: center;
+    }
+
+    // .hero__descr
+    &__descr {
+      br {
+        display: none;
+      }
+    }
+  }
+}

@@ -57,13 +57,13 @@
     </p>
     <form class="contacts-form" action="#" method="post">
       <div class="contacts-form__items">
-        @@include('../../components/ui-input.html', {
+        @@include('../../components/input.html', {
           "title": "Email",
           "type": "email",
           "name": "email",
           "placeholder": "nick@example.com"
         })
-        @@include('../../components/ui-input.html', {
+        @@include('../../components/input.html', {
           "title": "Phone",
           "type": "tel",
           "name": "phone",
@@ -83,27 +83,27 @@
         <fieldset class="form-field form-field--many">
           <legend class="form-field__caption">Gender</legend>
           <div class="form-field__row">
-            @@include('../../components/ui-radio.html', {
+            @@include('../../components/radio.html', {
               "name": "gender",
               "value": "Man"
             })
-            @@include('../../components/ui-radio.html', {
+            @@include('../../components/radio.html', {
               "name": "gender",
               "value": "Woman"
             })
           </div>
         </fieldset>
-        @@include('../../components/ui-textarea.html', {
+        @@include('../../components/textarea.html', {
           "title": "Message",
           "name": "message",
           "placeholder": 'Enter your message here'
         })
       </div>
-      @@include('../../components/ui-checkbox.html', {
+      @@include('../../components/checkbox.html', {
         "name": "checkbox",
         "value": "By clicking on the button, you consent to the processing <a href='#'>of data processing</a> and compiled with <a href='#'>confidentiality documents</a>"
       })
-      @@include('../../components/ui-button.html', {
+      @@include('../../components/btn.html', {
         'type': 'button',
         'view': '',
         'text': 'Send a message'

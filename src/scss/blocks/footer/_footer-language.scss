@@ -1,0 +1,8 @@
+// === FOOTER-LANGUAGE ===
+.footer-language {
+  @include tablet(min) {
+    grid-area: language;
+    grid-column: 9 / 11;
+    transform: translateX(-2px);
+  }
+}

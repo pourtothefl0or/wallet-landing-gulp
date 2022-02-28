@@ -1,0 +1,19 @@
+// === APPS-LINK ===
+.apps-link {
+  display: block;
+  transition: transform var(--primary-animation);
+
+  // .apps-link__image
+  &__image {
+    width: 140px;
+    height: 42px;
+    object-fit: cover;
+  }
+
+  // >>> .apps__link:hover
+  // >>> .apps__link:focus
+  &:hover,
+  &:focus {
+    transform: scale(var(--primary-scale));
+  }
+}

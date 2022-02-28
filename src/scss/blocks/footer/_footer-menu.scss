@@ -1,0 +1,57 @@
+// === FOOTER-MENU ===
+.footer-menu {
+  // .footer-menu__list
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 14px;
+
+    // MEDIA
+    @include tablet(max) {
+      justify-content: center;
+    }
+  }
+
+  // .footer-menu__item
+  &__item {
+    // .footer-menu__item:not(:last-child)
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      // MEDIA
+      @include tablet(min) {
+        position: relative;
+
+        // .footer-menu__item:not(:last-child)::after
+        &::after {
+          content: "/";
+          position: absolute;
+          top: 50%;
+          right: -12px;
+          color: #424242;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  // .footer-menu__link
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-dusty-gray;
+  }
+
+  // MEDIA
+  @include tablet(min) {
+    grid-area: menu;
+    grid-column: 4 / 8;
+    transform: translateX(-4px);
+
+    .footer-column__title {
+      margin-bottom: 21px;
+    }
+  }
+}

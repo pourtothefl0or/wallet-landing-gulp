@@ -1,0 +1,32 @@
+// === APPS-RATE ===
+.apps-rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: $color-white;
+
+  // .apps-rate__value
+  &__value {
+    margin: 0;
+    padding-right: 22px;
+    font-size: 20px;
+    line-height: 24px;
+    background-image: url("../images/icons/rate-star.svg");
+    background-size: 16px;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  // .apps-rate__reviews
+  &__reviews {
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    display: none;
+  }
+}

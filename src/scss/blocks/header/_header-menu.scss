@@ -1,0 +1,70 @@
+// === HEADER-MENU ===
+.header-menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
+  // .header-menu__item
+  &__item {
+    // .header-menu__item:not(:last-child)
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+
+  // .header-menu__link
+  &__link {
+    color: $color-dusty-gray;
+  }
+
+  // MEDIA
+  @include tablet(max) {
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 40px 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-ebony-clay;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition:
+      opacity var(--primary-animation),
+      visibility var(--primary-animation),
+      transform var(--primary-animation);
+
+    // .header-menu__item
+    &__item {
+      // .header-menu__item:not(:last-child)
+      &:not(:last-child) {
+        margin: 0 0 24px;
+      }
+    }
+
+    // .header-menu__link
+    &__link {
+      font-size: 26px;
+      line-height: 34px;
+      color: $color-white;
+    }
+
+    // >>> .header-menu--visible
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0%);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// === CONTACTS-PERSON-SOCIAL ===
+.contacts-person-social {
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 12px;
+  border-radius: var(--secondary-radius);
+  padding: 8px 16px;
+  background-color: $color-tundora-rgba;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--primary-animation),
+    visibility var(--primary-animation);
+
+  // .contacts-person-social__link
+  &__link {
+    display: block;
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      fill: $color-white;
+      object-fit: cover;
+      transition: fill var(--primary-animation);
+    }
+
+    // >>> .contacts-person-social__link:hover
+    &:hover {
+      svg {
+        fill: $color-dusty-gray;
+      }
+    }
+  }
+}

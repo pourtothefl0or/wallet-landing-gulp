@@ -1,0 +1,24 @@
+// .QUESTIONS-LIST
+.questions-list {
+  // .questions-list__item
+  &__item {
+    // .questions-list__item:not(:last-child)
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+
+  // MEDIA
+  @include tablet(max) {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    // .questions-list__item
+    &__item {
+      // .questions-list__item:not(:last-child)
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

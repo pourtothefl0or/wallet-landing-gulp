@@ -1,0 +1,39 @@
+// === CONTACTS-PERSON ===
+.contacts-person {
+  position: relative;
+  display: inline-block;
+
+  // .contacts-person__image
+  &__image {
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: var(--secondary-radius);
+    padding: 16px;
+    width: var(--contacts-person);
+    height: var(--contacts-person);
+    background-color: $color-white;
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    // .contacts-person__image:hover
+    &:hover {
+      .contacts-person-social {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

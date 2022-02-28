@@ -1,0 +1,85 @@
+// === ROOT ===
+:root {
+  // >>> grid
+  --grid-columns: 12;
+  --grid-gap: 20px;
+
+  // >>> primary
+  --primary-radius: 4px;
+  --primary-animation: 0.3s ease-in-out;
+  --primary-indent: 20px;
+  --primary-scale: 1.03;
+
+  // >>> secondary
+  --secondary-radius: 8px;
+
+  // >>> sections
+  --coins-card: 260px;
+  --coins-card-image: 30px;
+  --blog-card: 280px;
+  --blog-author-image: 52px;
+  --contacts-person: 216px;
+
+  // >>> typography
+  --title-xxl-fz: 48px;
+  --title-xxl-lh: 62px;
+
+  --title-xl-fz: 40px;
+  --title-xl-lh: 52px;
+
+  --title-l-fz: 32px;
+  --title-l-lh: 42px;
+
+  --title-m-fz: 28px;
+  --title-m-lh: 36px;
+
+  --title-xs-fz: 20px;
+  --title-xs-lh: 24px;
+
+  --descr-xl-fz: 16px;
+  --descr-xl-lh: 22px;
+}
+
+@include minidesktop(max) {
+  :root {
+    --coins-card: 225px;
+  }
+}
+
+@include tablet(max) {
+  :root {
+    --primary-indent: 24px;
+
+    --blog-card: 202px;
+    --coins-card-image: 40px;
+    --blog-author-image: 38px;
+    --contacts-person: 244px;
+
+    --title-xxl-fz: 34px;
+    --title-xxl-lh: 44px;
+
+    --title-xl-fz: 28px;
+    --title-xl-lh: 36px;
+
+    --title-m-fz: 18px;
+    --title-m-lh: 23px;
+
+    --title-xs-fz: 18px;
+    --title-xs-lh: 22px;
+
+    --descr-xl-fz: 14px;
+    --descr-xl-lh: 20px;
+  }
+}
+
+@include minitablet(max) {
+  :root {
+    --coins-card: 165px;
+  }
+}
+
+@include mobile(max) {
+  :root {
+    --coins-card: 150px;
+  }
+}

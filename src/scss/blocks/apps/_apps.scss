@@ -1,0 +1,12 @@
+// === APPS ===
+.apps {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  // MEDIA
+  @include minitablet(max) {
+    justify-content: center;
+    gap: 25px;
+  }
+}

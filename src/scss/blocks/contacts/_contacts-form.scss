@@ -1,0 +1,50 @@
+// === CONTACTS-FORM ===
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+
+  // .contacts-form__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+    margin-bottom: 10px;
+
+    > * {
+      grid-column: 2 span;
+    }
+  }
+
+  .btn {
+    align-self: center;
+    margin-top: 45px;
+  }
+
+  // MEDIA
+  @include tablet(min) {
+    grid-area: form;
+
+    // .contacts-form__item
+    &__items {
+      gap: 24px 48px;
+
+      .form-field {
+        // .form-field:nth-child(3)
+        &:nth-child(3) {
+          grid-column: 1;
+        }
+
+        // .form-field:nth-child(4)
+        &:nth-child(4) {
+          grid-column: 2;
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .btn {
+      align-self: flex-start;
+      margin-top: 33px;
+    }
+  }
+}

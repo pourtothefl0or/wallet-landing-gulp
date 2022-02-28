@@ -1,0 +1,57 @@
+// === ACCORDION ===
+.accordion {
+  display: block;
+  box-shadow: 0 4px 11px rgba(56, 57, 77, 0.1);
+  border-radius: var(--secondary-radius);
+  padding: 46px 40px;
+  background-color: $color-white;
+  transition: background-color var(--primary-animation);
+  cursor: pointer;
+
+  // MEDIA
+  @include tablet(max) {
+    padding: 19px 12px 19px 16px;
+  }
+
+  // .accordion__body
+  &__body {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      margin-top var(--primary-animation),
+      max-height var(--primary-animation),
+      opacity var(--primary-animation),
+      visibility var(--primary-animation);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // >>> .accordion--opened
+  &--opened {
+    padding-bottom: 40px;
+    background-color: #fafafa;
+
+    .accordion-header__icon {
+      // .accordion-header__icon::after
+      &::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+    .accordion__body {
+      margin-top: 45px;
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+
+      // MEDIA
+      @include tablet(max) {
+        margin-top: 16px;
+      }
+    }
+  }
+}

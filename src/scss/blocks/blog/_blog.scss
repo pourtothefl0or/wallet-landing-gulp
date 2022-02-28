@@ -1,0 +1,43 @@
+// === BLOG ===
+.blog {
+  background-color: $color-white;
+
+  // .blog__container
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "title btn"
+      "cards cards";
+    row-gap: 58px;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  // .blog__title
+  &__title {
+    grid-area: title;
+    margin: 0;
+  }
+
+  .btn {
+    grid-area: btn;
+    justify-self: flex-end;
+  }
+
+  // MEDIA
+  @include tablet(max) {
+    // .blog__container
+    &__container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    .btn {
+      align-self: center;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// === CONTACTS ===
+.contacts {
+  background-color: $color-white;
+
+  // .contacts__container
+  &__container {
+    padding-top: 53px;
+    padding-bottom: 50px;
+  }
+
+  // .contacts__title
+  // .contacts__descr
+  &__title,
+  &__descr {
+    margin: 0 0 var(--primary-indent);
+  }
+
+  // MEDIA
+  @include tablet(min) {
+    // .contacts__container
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 542px;
+      grid-template-areas:
+        ". title"
+        "workers descr"
+        "workers form";
+      column-gap: 104px;
+    }
+
+    // .contacts__title
+    &__title {
+      grid-area: title;
+    }
+
+    // .contacts__descr
+    &__descr {
+      grid-area: descr;
+    }
+  }
+
+  // MEDIA
+  @include tablet(max) {
+    // .contacts__container
+    &__container {
+      padding-top: 42px;
+      padding-bottom: 15px;
+    }
+  }
+}

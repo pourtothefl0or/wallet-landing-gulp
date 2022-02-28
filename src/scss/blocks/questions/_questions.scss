@@ -1,0 +1,28 @@
+// === QUESTIONS ===
+.questions {
+  background-color: $color-white;
+
+  // .questions__container
+  &__container {
+    padding-top: 56px;
+    padding-bottom: 100px;
+  }
+
+  // .questions__title
+  &__title {
+    margin: 0 0 40px;
+  }
+
+  @include tablet(max) {
+    // .questions__container
+    &__container {
+      padding-top: 37px;
+      padding-bottom: 60px;
+    }
+
+    // .questions__title
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+}

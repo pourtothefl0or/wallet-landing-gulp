@@ -1,0 +1,30 @@
+// === CONTACTS-PERSON-INFO ===
+.contacts-person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--secondary-radius);
+  box-shadow: 0px 2px 7px rgba(56, 57, 77, 0.1);
+  padding: 32px;
+  width: var(--contacts-person);
+  height: var(--contacts-person);
+  background-color: $color-white;
+
+  // .contacts-person-info__name
+  &__name {
+    margin: 0 0 6px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-ebony-clay;
+  }
+
+  // .contacts-person-info__position
+  &__position {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-dusty-gray;
+  }
+}

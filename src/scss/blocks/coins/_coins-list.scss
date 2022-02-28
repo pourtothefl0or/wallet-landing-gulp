@@ -1,0 +1,19 @@
+// === COINS-LIST ===
+.coins-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--coins-card), 1fr));
+  align-items: center;
+  gap: 47px 20px;
+
+  @include minitablet(max) {
+    row-gap: 24px;
+
+    // .coins-list__item
+    &__item {
+      // .coins-list__item:not(:nth-of-type(-n+10))
+      &:not(:nth-of-type(-n+10)) {
+        display: none;
+      }
+    }
+  }
+}

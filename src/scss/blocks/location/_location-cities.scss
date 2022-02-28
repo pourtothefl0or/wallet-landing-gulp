@@ -1,0 +1,15 @@
+// === LOCATION-CITIES ===
+.location-cities {
+  position: relative;
+  z-index: 5;
+  display: inline-flex;
+  flex-direction: column;
+
+  // .location-cities__item
+  &__item {
+    // .location-cities__item:not(:last-child)
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

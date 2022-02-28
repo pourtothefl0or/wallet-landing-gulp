@@ -1,0 +1,54 @@
+// === LOCATION ===
+.location {
+  overflow: hidden;
+  position: relative;
+  background-color: $color-white;
+
+  // .location__image
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-13%, -49%);
+  }
+
+  // .location__container
+  &__container {
+    padding-top: 127px;
+    padding-bottom: 127px;
+  }
+
+  // .location__title
+  &__title {
+    position: relative;
+    z-index: 5;
+    margin: 0 0 40px;
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    // .location__image
+    &__image {
+      position: inherit;
+      width: 100%;
+      height: 364px;
+      object-fit: cover;
+      transform: unset;
+    }
+
+    // .location__container
+    &__container {
+      padding: 20px 35px 18px;
+      width: 100%;
+    }
+
+    // .location__title
+    &__title {
+      margin-bottom: 24px;
+      transform: translateX(-10px);
+    }
+  }
+}

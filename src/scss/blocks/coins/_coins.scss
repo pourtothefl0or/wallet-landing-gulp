@@ -1,0 +1,64 @@
+// === COINS ===
+.coins {
+  background-color: $color-white;
+
+  // .coins__container
+  &__container {
+    padding-top: 178px;
+    padding-bottom: 60px;
+
+    // MEDIA
+    @include tablet(max) {
+      padding-top: 70px;
+      padding-bottom: 25px;
+    }
+  }
+
+  // .coins__title
+  &__title {
+    margin: 0 0 var(--primary-indent);
+  }
+
+  // .coins__descr
+  &__descr {
+    margin: 0 0 64px;
+
+    // MEDIA
+    @include tablet(max) {
+      margin-bottom: 35px;
+    }
+  }
+
+  // .coins-other
+  &-other {
+    display: inline-block;
+    border: 1px dashed currentColor;
+    border-radius: var(--secondary-radius);
+    padding: 8px 17px;
+    font-weight: 500;
+    text-align: center;
+    color: $color-dusty-gray;
+    transition: color var(--primary-animation);
+
+    // >>> .coins-other:hover
+    // >>> .coins-other:focus
+    &:hover,
+    &:focus {
+      color: $color-governor-bay;
+    }
+  }
+
+  // MEDIA
+  @include minitablet(min) {
+    .centered {
+      display: none;
+    }
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    .centered {
+      margin-top: 43px;
+    }
+  }
+}

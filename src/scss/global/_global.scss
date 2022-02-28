@@ -15,7 +15,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'IBM Plex Sans', sans-serif;
+  @include ff-IBMPlexSans;
   font-weight: 400;
   font-size: 16px;
   color: $color-ebony-clay;

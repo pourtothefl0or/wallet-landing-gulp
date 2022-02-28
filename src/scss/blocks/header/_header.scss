@@ -1,0 +1,80 @@
+// === HEADER ===
+.header {
+  background-color: $color-ebony-clay;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 23px;
+    padding-bottom: 22px;
+  }
+
+  // .header__nav
+  &__nav {
+    margin-left: 20px;
+
+    .btn-menu {
+      display: none;
+    }
+
+    // MEDIA
+    @include minidesktop(min) {
+      margin: 5px 0 0 165px;
+    }
+  }
+
+  // .header__btns
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+
+    .btn {
+      min-width: 124px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  // MEDIA
+  @include tablet(max) {
+    border-bottom: initial;
+
+    // .header__container
+    &__container {
+      padding: 18px;
+    }
+
+    // .header__nav
+    &__nav {
+      order: -1;
+      margin-left: 0;
+
+      .btn-menu {
+        display: flex;
+        margin-right: 23px;
+
+        // >>> .btn-menu--active
+        &--active {
+          position: relative;
+          z-index: 100;
+        }
+      }
+    }
+
+    // .header__btns
+    &__btns {
+      .btn {
+        min-width: auto;
+
+        // .btn:not(:first-child)
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+    }
+  }
+}

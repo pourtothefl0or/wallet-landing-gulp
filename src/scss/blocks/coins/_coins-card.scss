@@ -1,0 +1,77 @@
+// === COINS-CARD ===
+.coins-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  // .coins-card__image
+  &__image {
+    width: var(--coins-card-image);
+    height: var(--coins-card-image);
+    object-fit: cover;
+    transition: transform var(--primary-animation);
+  }
+
+  // .coins-card__abbr
+  &__abbr {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: $color-ebony-clay;
+    transition: color var(--primary-animation);
+  }
+
+  // .coins-card__name
+  &__name {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-dusty-gray;
+    transition: color var(--primary-animation);
+  }
+
+  // >>> .coins-card:hover
+  // >>> .coins-card:focus
+  &:hover,
+  &:focus {
+    .coins-card__image {
+      transform: rotate(360deg);
+    }
+
+    .coins-card__abbr,
+    .coins-card__name {
+      color: $color-governor-bay;
+    }
+  }
+
+  // MEDIA
+  @include minitablet(max) {
+    display: grid;
+    grid-template-columns: var(--coins-card-image) 1fr;
+    grid-template-areas:
+      "image abbr"
+      "image name";
+    gap: 0 8px;
+
+    // .coins-card__image
+    &__image {
+      grid-area: image;
+      width: var(--coins-card-image);
+      height: var(--coins-card-image);
+    }
+
+    // .coins-card__abbr
+    &__abbr {
+      grid-area: abbr;
+      margin-bottom: 2px;
+    }
+
+    // .coins-card__name
+    &__name {
+      grid-area: name;
+    }
+  }
+}
