@@ -23,6 +23,7 @@ export const paths = {
     js: `${srcFolder}/js/**/*.js`,
     styles: `${srcFolder}/scss/**/*.scss`,
     img: `${srcFolder}/images/**/*.{jpg,jpeg,svg,ico,png,gif,webp}`,
+    favicon: `${srcFolder}/favicons/*.{jpg,jpeg,svg,ico,png}`,
   },
   clean: distFolder,
   distFolder: distFolder,

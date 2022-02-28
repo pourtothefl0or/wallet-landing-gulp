@@ -49,8 +49,8 @@
   }
 }
 
-// === PERSON-SOCIAL ===
-.person-social {
+// === CONTACTS-PERSON-SOCIAL ===
+.contacts-person-social {
   z-index: 10;
   display: inline-flex;
   justify-content: center;
@@ -66,7 +66,7 @@
     opacity var(--primary-animation),
     visibility var(--primary-animation);
 
-  // .person-social__link
+  // .contacts-person-social__link
   &__link {
     display: block;
 
@@ -79,7 +79,7 @@
       transition: fill var(--primary-animation);
     }
 
-    // >>> .person-social__link:hover
+    // >>> .contacts-person-social__link:hover
     &:hover {
       svg {
         fill: $color-dusty-gray;
@@ -88,12 +88,12 @@
   }
 }
 
-// === PERSON ===
-.person {
+// === CONTACTS-PERSON ===
+.contacts-person {
   position: relative;
   display: inline-block;
 
-  // .person__image
+  // .contacts-person__image
   &__image {
     overflow: hidden;
     position: relative;
@@ -118,9 +118,9 @@
       object-fit: cover;
     }
 
-    // .person__image:hover
+    // .contacts-person__image:hover
     &:hover {
-      .person-social {
+      .contacts-person-social {
         opacity: 1;
         visibility: visible;
       }
@@ -128,8 +128,8 @@
   }
 }
 
-// === PERSON-INFO ===
-.person-info {
+// === CONTACTS-PERSON-INFO ===
+.contacts-person-info {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -140,7 +140,7 @@
   height: var(--contacts-person);
   background-color: $color-white;
 
-  // .person-info__name
+  // .contacts-person-info__name
   &__name {
     margin: 0 0 6px;
     font-weight: 400;
@@ -149,7 +149,7 @@
     color: $color-ebony-clay;
   }
 
-  // .person-info__position
+  // .contacts-person-info__position
   &__position {
     margin: 0;
     font-weight: 400;
@@ -171,15 +171,15 @@
   &__item {
     // .contacts-workers__item:nth-of-type(odd)
     &:nth-of-type(odd) {
-      .person {
-        // .person__image
+      .contacts-person {
+        // .contacts-person__image
         &__image {
           position: absolute;
           top: 0;
           left: 0;
         }
 
-         // .person-info
+         // .contacts-person-info
         &-info {
           margin: 104px 0 0 64px;
         }
@@ -188,13 +188,13 @@
 
     // .contacts-workers__item:nth-of-type(even)
     &:nth-of-type(even) {
-      .person {
-         // .person__image
+      .contacts-person {
+         // .contacts-person__image
         &__image {
           margin: 104px 0 0 64px;
         }
 
-         // .person-info
+         // .contacts-person-info
         &-info {
           position: absolute;
           top: 0;
@@ -208,8 +208,8 @@
     @include tablet(max) {
       // .contacts-workers__item:nth-of-type(odd)
       &:nth-of-type(odd) {
-        .person {
-          // .person-info
+        .contacts-person {
+          // .contacts-person-info
           &-info {
             margin: 130px 0 0 50px;
           }
@@ -218,8 +218,8 @@
 
       // .contacts-workers__item:nth-of-type(even)
       &:nth-of-type(even) {
-        .person {
-          // .person__image
+        .contacts-person {
+          // .contacts-person__image
           &__image {
             margin: 130px 0 0 50px;
           }
